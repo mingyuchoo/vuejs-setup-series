@@ -1,6 +1,6 @@
 <template>
   <div class="user">
-    <h2>User {{ $route.params.id }}</h2>
+    <h2>{{ title }} {{ $route.params.id }}</h2>
     <router-link to="/users">Go back</router-link>
   </div>
 </template>
@@ -10,7 +10,11 @@ export default {
   name: "User",
   components: {},
   methods: {},
-  data() {},
+  data() {
+    return {
+      title: "User",
+    };
+  },
   setup() {},
   created() {},
   mounted() {},

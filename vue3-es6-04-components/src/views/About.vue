@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h2>About</h2>
+    <h2>{{ title }}</h2>
     <p>Times clicked: {{ count }}</p>
     <input type="button" class="button" @click="increment" value="Increase" />
   </div>
@@ -17,6 +17,7 @@ export default {
   },
   data() {
     return {
+      title: "About",
       count: 0,
     };
   },

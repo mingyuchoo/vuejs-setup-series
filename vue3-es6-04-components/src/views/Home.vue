@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h2>Home</h2>
+    <h2>{{ title }}</h2>
     <p id="poem">
       Vivamus, mea Lesbia, atque amemus, rumoresque senum severiorum omnes unius
       aestimemus assis! soles occidere et redire possunt: nobis cum semel
@@ -17,7 +17,11 @@ export default {
   name: "Home",
   components: {},
   methods: {},
-  data() {},
+  data() {
+    return {
+      title: "Home",
+    };
+  },
   setup() {},
   created() {},
   mounted() {},

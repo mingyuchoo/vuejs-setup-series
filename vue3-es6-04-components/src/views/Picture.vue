@@ -1,6 +1,6 @@
 <template>
   <div class="picture">
-    <h2>Picture {{ $route.params.id }}</h2>
+    <h2>{{ title }} {{ $route.params.id }}</h2>
     <router-link to="/pictures">Go back</router-link>
   </div>
 </template>
@@ -10,7 +10,11 @@ export default {
   name: "Picture",
   components: {},
   methods: {},
-  data() {},
+  data() {
+    return {
+      title: "Picture",
+    };
+  },
   setup() {},
   created() {},
   mounted() {},

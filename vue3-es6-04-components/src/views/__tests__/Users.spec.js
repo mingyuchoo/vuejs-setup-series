@@ -5,6 +5,6 @@ describe("Users.vue", () => {
   it("renders", () => {
     const wrapper = shallowMount(Users);
     // console.log(wrapper.html());
-    expect(wrapper.html()).toContain("Users List");
+    expect(wrapper.html()).toContain("Users");
   });
 });

@@ -1,6 +1,6 @@
 <template>
   <div class="not-found">
-    <h2>NotFound</h2>
+    <h2>{{ title }}</h2>
   </div>
 </template>
 
@@ -9,7 +9,11 @@ export default {
   name: "NotFound",
   components: {},
   methods: {},
-  data() {},
+  data() {
+    return {
+      title: "NotFound",
+    };
+  },
   setup() {},
   created() {},
   mounted() {},

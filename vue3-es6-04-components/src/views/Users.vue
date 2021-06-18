@@ -1,6 +1,6 @@
 <template>
   <div class="users">
-    <h2>Users List</h2>
+    <h2>{{ title }}</h2>
     <p>counter value is {{ users.length }}</p>
     <ul>
       <li v-for="user in users" :key="user">
@@ -23,6 +23,7 @@ export default {
   },
   data() {
     return {
+      title: "Users",
       users: [...Array(10).keys()],
     };
   },

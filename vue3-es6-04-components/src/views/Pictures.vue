@@ -1,11 +1,14 @@
 <template>
   <div class="pictures">
-    <h2>Pictures List</h2>
+    <h2>{{ title }}</h2>
+    Search <input type="text" v-model="search" /> Items
+    <input type="number" v-model.number="count" />
+    <textarea v-model="content"></textarea>
     <p>counter value is {{ pictures.length }}</p>
     <ul>
-      <li v-for="user in pictures" :key="user">
-        <router-link :to="{ name: 'user', params: { id: user } }"
-          >user {{ user }}</router-link
+      <li v-for="picture in pictures" :key="picture">
+        <router-link :to="{ name: 'picture', params: { id: picture } }"
+          >picture {{ picture }}</router-link
         >
       </li>
     </ul>
@@ -23,6 +26,11 @@ export default {
   },
   data() {
     return {
+      title: "Pictures",
+      search: "space",
+      count: 3,
+      content:
+        "Teams employed Branch by Abstraction many years before it got its name (Stacy Curl named it in 2007)",
       pictures: [...Array(10).keys()],
     };
   },
