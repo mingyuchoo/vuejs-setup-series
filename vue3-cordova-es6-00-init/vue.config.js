@@ -1,6 +1,6 @@
 module.exports = {
-  publicPath: '',
-  pluginOptions: {
-    cordovaPath: 'src-cordova'
+  chainWebpack: config => {
+    config.plugins.delete('prefetch');
   }
 }
+

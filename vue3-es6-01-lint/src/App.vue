@@ -10,6 +10,19 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: "App",
+  components: {},
+  methods: {},
+  data() {},
+  setup() {},
+  created() {},
+  mounted() {},
+  unmounted() {},
+};
+</script>
+
 <style>
 #app {
   font-family: Arial, Helvetica, sans-serif;

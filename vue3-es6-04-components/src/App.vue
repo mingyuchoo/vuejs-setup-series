@@ -11,6 +11,19 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: "App",
+  components: {},
+  methods: {},
+  data() {},
+  setup() {},
+  created() {},
+  mounted() {},
+  unmounted() {},
+};
+</script>
+
 <style>
 body {
   font-family: "Noto Sans KR", sans-serif;

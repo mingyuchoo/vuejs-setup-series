@@ -13,6 +13,19 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: "Home",
+  components: {},
+  methods: {},
+  data() {},
+  setup() {},
+  created() {},
+  mounted() {},
+  unmounted() {},
+};
+</script>
+
 <style>
 p#poem {
   text-align: left;

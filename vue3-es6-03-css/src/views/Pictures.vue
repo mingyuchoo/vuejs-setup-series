@@ -14,16 +14,22 @@
 
 <script>
 export default {
-  data() {
-    return {
-      pictures: [...Array(10).keys()],
-    };
-  },
+  name: "Pictures",
+  components: {},
   methods: {
     sayHello() {
       console.log("hello");
     },
   },
+  data() {
+    return {
+      pictures: [...Array(10).keys()],
+    };
+  },
+  setup() {},
+  created() {},
+  mounted() {},
+  unmounted() {},
 };
 </script>
 

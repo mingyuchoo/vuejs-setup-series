@@ -9,14 +9,21 @@
 <script>
 export default {
   name: "About",
-  data: () => ({
-    count: 0,
-  }),
+  components: {},
   methods: {
     increment() {
       this.count++;
     },
   },
+  data() {
+    return {
+      count: 0,
+    };
+  },
+  setup() {},
+  created() {},
+  mounted() {},
+  unmounted() {},
 };
 </script>
 <style>
