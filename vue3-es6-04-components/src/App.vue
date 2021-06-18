@@ -16,6 +16,8 @@ export default {
   name: "App",
   components: {},
   methods: {},
+  computed: {},
+  watch: {},
   data() {},
   setup() {},
   created() {},

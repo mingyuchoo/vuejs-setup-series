@@ -10,6 +10,8 @@ export default {
   name: "Picture",
   components: {},
   methods: {},
+  computed: {},
+  watch: {},
   data() {
     return {
       title: "Picture",

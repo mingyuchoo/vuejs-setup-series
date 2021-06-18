@@ -3,8 +3,10 @@
     <h2>{{ title }}</h2>
     <img v-bind:src="image" />
     <br />
-    <input type="text" v-model="textValue" />
-    <button type="button" v-bind:disabled="textValue == ''">Click</button>
+    <div v-if="ff_01">
+      <input type="text" v-model="textValue" />
+      <button type="button" v-bind:disabled="textValue == ''">Click</button>
+    </div>
     <p class="poem" v-bind:class="{ active: isActive, 'text-red': hasError }">
       Vivamus, mea Lesbia, atque amemus, rumoresque senum severiorum omnes unius
       aestimemus assis! soles occidere et redire possunt: nobis cum semel
@@ -15,13 +17,15 @@
       basiorum.
     </p>
   </div>
-  <div v-bind:style="styleObject">Inline Style Binding</div>
+  <div v-bind:style="styleObject" v-if="ff_01">Inline Style Binding</div>
 </template>
 <script>
 export default {
   name: "Home",
   components: {},
   methods: {},
+  compted: {},
+  watch: {},
   data() {
     return {
       image: "https://vuejs.org/images/logo.svg",
@@ -33,6 +37,7 @@ export default {
         color: "red",
         fontSize: "13px",
       },
+      ff_01: false,
     };
   },
   setup() {},

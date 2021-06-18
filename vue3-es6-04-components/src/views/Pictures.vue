@@ -1,13 +1,15 @@
 <template>
   <div class="pictures">
     <h2>{{ title }}</h2>
-    Search <input type="text" v-model="search" /> Items
-    <input type="number" v-model.number="count" />
-    <textarea v-model="content"></textarea>
+    <div v-if="ff_01">
+      Search <input type="text" v-model="search" /> Items
+      <input type="number" v-model.number="count" />
+      <textarea v-model="content"></textarea>
+    </div>
     <p>counter value is {{ pictures.length }}</p>
     <ul>
-      <li v-for="picture in pictures" :key="picture">
-        <router-link :to="{ name: 'picture', params: { id: picture } }"
+      <li v-for="picture in pictures" v-bind:key="picture">
+        <router-link v-bind:to="{ name: 'picture', params: { id: picture } }"
           >picture {{ picture }}</router-link
         >
       </li>
@@ -24,6 +26,8 @@ export default {
       console.log("hello");
     },
   },
+  computed: {},
+  watch: {},
   data() {
     return {
       title: "Pictures",
@@ -32,6 +36,7 @@ export default {
       content:
         "Teams employed Branch by Abstraction many years before it got its name (Stacy Curl named it in 2007)",
       pictures: [...Array(10).keys()],
+      ff_01: false,
     };
   },
   setup() {},

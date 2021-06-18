@@ -9,6 +9,8 @@ export default {
   name: "NotFound",
   components: {},
   methods: {},
+  computed: {},
+  watch: {},
   data() {
     return {
       title: "NotFound",

@@ -1,16 +1,18 @@
 <template>
   <div class="users">
     <h2>{{ title }}</h2>
-    <select v-model="city">
-      <option value="02">Seoul</option>
-      <option value="21">Busan</option>
-      <option value="064">Jeju</option>
-    </select>
-    <label><input type="checkbox" v-model="checked" /> {{ checked }}</label>
+    <div v-if="ff_01">
+      <select v-model="city">
+        <option value="02">Seoul</option>
+        <option value="21">Busan</option>
+        <option value="064">Jeju</option>
+      </select>
+      <label><input type="checkbox" v-model="checked" /> {{ checked }}</label>
+    </div>
     <p>counter value is {{ users.length }}</p>
     <ul>
-      <li v-for="user in users" :key="user">
-        <router-link :to="{ name: 'user', params: { id: user } }"
+      <li v-for="user in users" v-bind:key="user">
+        <router-link v-bind:to="{ name: 'user', params: { id: user } }"
           >user {{ user }}</router-link
         >
       </li>
@@ -27,12 +29,15 @@ export default {
       console.log("hello");
     },
   },
+  computed: {},
+  watch: {},
   data() {
     return {
       title: "Users",
       city: "064",
       checked: true,
       users: [...Array(10).keys()],
+      ff_01: false,
     };
   },
   setup() {},

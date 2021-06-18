@@ -1,7 +1,7 @@
 import { shallowMount } from "@vue/test-utils";
-import User from "@/views/User.vue";
+import Picture from "@/views/Picture.vue";
 
-describe("User.vue", () => {
+describe("Picture.vue", () => {
   it("renders", () => {
     const mockRoute = {
       params: {
@@ -11,7 +11,7 @@ describe("User.vue", () => {
     const mockRouter = {
       push: jest.fn(),
     };
-    const wrapper = shallowMount(User, {
+    const wrapper = shallowMount(Picture, {
       global: {
         mocks: {
           $route: mockRoute,
@@ -19,7 +19,7 @@ describe("User.vue", () => {
         },
       },
     });
-    //console.log(wrapper.html());
-    expect(wrapper.html()).toContain("User");
+    console.log(wrapper.html());
+    expect(wrapper.html()).toMatch(/Picture/);
   });
 });
