@@ -1,7 +1,11 @@
 <template>
   <div class="home">
     <h2>{{ title }}</h2>
-    <p id="poem">
+    <img v-bind:src="image" />
+    <br />
+    <input type="text" v-model="textValue" />
+    <button type="button" v-bind:disabled="textValue == ''">Click</button>
+    <p class="poem" v-bind:class="{ active: isActive, 'text-red': hasError }">
       Vivamus, mea Lesbia, atque amemus, rumoresque senum severiorum omnes unius
       aestimemus assis! soles occidere et redire possunt: nobis cum semel
       occidit brevis lux, nox est perpetua una dormienda. da mi basia mille,
@@ -11,6 +15,7 @@
       basiorum.
     </p>
   </div>
+  <div v-bind:style="styleObject">Inline Style Binding</div>
 </template>
 <script>
 export default {
@@ -19,7 +24,15 @@ export default {
   methods: {},
   data() {
     return {
+      image: "https://vuejs.org/images/logo.svg",
       title: "Home",
+      textValue: "",
+      isActive: true,
+      hasError: false,
+      styleObject: {
+        color: "red",
+        fontSize: "13px",
+      },
     };
   },
   setup() {},
@@ -30,8 +43,30 @@ export default {
 </script>
 
 <style>
-p#poem {
+p.poem {
   text-align: left;
   padding: 10px 20px;
+}
+img {
+  max-width: 30%;
+  height: auto;
+}
+button {
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+}
+input[type="text"] {
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+.active {
+  background-color: yellow;
+  font-weight: bold;
+}
+.text-red {
+  color: red;
 }
 </style>

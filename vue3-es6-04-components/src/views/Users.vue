@@ -1,6 +1,12 @@
 <template>
   <div class="users">
     <h2>{{ title }}</h2>
+    <select v-model="city">
+      <option value="02">Seoul</option>
+      <option value="21">Busan</option>
+      <option value="064">Jeju</option>
+    </select>
+    <label><input type="checkbox" v-model="checked" /> {{ checked }}</label>
     <p>counter value is {{ users.length }}</p>
     <ul>
       <li v-for="user in users" :key="user">
@@ -24,6 +30,8 @@ export default {
   data() {
     return {
       title: "Users",
+      city: "064",
+      checked: true,
       users: [...Array(10).keys()],
     };
   },
@@ -43,5 +51,13 @@ ul {
 }
 li {
   display: inline;
+}
+
+select {
+  width: 20%;
+  padding: 10px 15px;
+  border: 1px dashed blue;
+  border-radius: 4px;
+  background-color: #ff96ad;
 }
 </style>
