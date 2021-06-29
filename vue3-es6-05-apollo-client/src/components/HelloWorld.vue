@@ -1,8 +1,17 @@
 <template>
   <div class="hello">
-    <h1>Hello</h1>
-    <p>Hello, World</p>
-    <pre>{{ result.task }}</pre>
+    <h1>Tasks</h1>
+    <div v-if="loading">Loading...</div>
+    <div v-else-if="error">Error: {{ error.message }}</div>
+    <div v-else-if="tasks">
+      <ul v-for="task of tasks" v-bind:key="task.id">
+        <li>{{ task.id }}</li>
+        <li>{{ task.title }}</li>
+        <li>{{ task.content }}</li>
+        <li>{{ task.created_at }}</li>
+        <li>{{ task.updated_at }}</li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -10,41 +19,50 @@
 /*
 - URL: http://localhost:8080/v1/graphql
 - Query:
-query MyQuery {
-  task {
+query QueryTasks {
+  tasks {
     id
     title
     content
+    created_at
+    updated_at
   }
 }
 - Response:
 {
   "data": {
-    "task": [
+    "tasks": [
       {
         "id": 1,
         "title": "Greeting",
-        "content": "Hello, World"
+        "content": "Hello, World",
+        "created_at": "2021-06-29T18:23:57.725089+00:00",
+        "updated_at": "2021-06-29T18:23:57.725089+00:00"
       }
     ]
   }
 }
 */
-import { useQuery } from "@vue/apollo-composable";
+import { useQuery, useResult } from "@vue/apollo-composable";
 import gql from "graphql-tag";
 export default {
   setup() {
-    const { result } = useQuery(gql`
-      query MyQuery {
-        task {
+    const { result, loading, error } = useQuery(gql`
+      query getTasks {
+        tasks {
           id
           title
           content
+          created_at
+          updated_at
         }
       }
     `);
+    const tasks = useResult(result, null, (data) => data.tasks);
     return {
-      result,
+      tasks,
+      loading,
+      error,
     };
   },
 };

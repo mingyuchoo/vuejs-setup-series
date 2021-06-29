@@ -16,6 +16,7 @@ const apolloClient = new ApolloClient({
   link: httpLink,
   cache: new InMemoryCache(),
 });
+
 const app = createApp({
   setup() {
     provide(ApolloClients, {
