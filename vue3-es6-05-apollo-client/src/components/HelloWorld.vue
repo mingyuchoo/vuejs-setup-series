@@ -1,6 +1,25 @@
 <template>
   <div class="hello">
     <h1>Tasks</h1>
+    <div>
+      <input
+        type="text"
+        placeholder="Title"
+        v-bind:value="title"
+        v-on:input="updateTitle"
+      />
+      <input
+        type="text"
+        placeholder="Content"
+        v-bind:value="content"
+        v-on:input="updateContent"
+      />
+      <input
+        type="button"
+        value="Submit"
+        v-on:click="insertTask({ title: title, content: content })"
+      />
+    </div>
     <div v-if="loading">Loading...</div>
     <div v-else-if="error">Error: {{ error.message }}</div>
     <div v-else-if="tasks">
@@ -43,12 +62,54 @@ query QueryTasks {
   }
 }
 */
-import { useQuery, useResult } from "@vue/apollo-composable";
+import { useMutation, useQuery, useResult } from "@vue/apollo-composable";
 import gql from "graphql-tag";
 export default {
+  data() {
+    return {
+      title: "",
+      content: "",
+    };
+  },
+  methods: {
+    updateTitle(event) {
+      this.title = event.target.value;
+      console.log(this.title);
+    },
+    updateContent(event) {
+      this.content = event.target.value;
+      console.log(this.content);
+    },
+    setTask() {
+      console.log(this.title + " " + this.content);
+      this.title = "";
+      this.content = "";
+    },
+  },
   setup() {
+    const { mutate: insertTask, onDone } = useMutation(
+      gql`
+        mutation insertTask($title: String!, $content: String!) {
+          insert_tasks(objects: { title: $title, content: $content }) {
+            returning {
+              id
+              title
+              content
+              created_at
+              updated_at
+            }
+          }
+        }
+      `,
+      {
+        fetchPolicy: "no-cache",
+      }
+    );
+    onDone((result) => {
+      console.log(result.data);
+    });
     const { result, loading, error } = useQuery(gql`
-      query getTasks {
+      query selectTasks {
         tasks {
           id
           title
@@ -63,6 +124,7 @@ export default {
       tasks,
       loading,
       error,
+      insertTask,
     };
   },
 };
