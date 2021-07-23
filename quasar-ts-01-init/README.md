@@ -5,6 +5,8 @@ A Quasar Framework app
 ## Install the dependencies
 
 ```bash
+yarn install
+rm -rf node_modules
 yarn install --offline
 ```
 
