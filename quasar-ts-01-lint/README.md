@@ -1,4 +1,4 @@
-# Quasar App (quasar-ts-01-init)
+# Quasar App (quasar-ts-01-lint)
 
 A Quasar Framework app
 

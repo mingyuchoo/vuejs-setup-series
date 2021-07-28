@@ -1,4 +1,4 @@
-# Quasar App (quasar-ts-00-init)
+# Quasar App (quasar-ts-02-test-jest)
 
 A Quasar Framework app
 

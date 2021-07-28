@@ -1,13 +1,16 @@
 {
-  "name": "quasar-ts-00-init",
+  "name": "quasar-ts-02-test-jest",
   "version": "0.0.1",
   "description": "A Quasar Framework app",
   "productName": "Quasar App",
   "author": "mingyuchoo <mingyuchoo@gmail.com>",
   "private": true,
   "scripts": {
-    "lint": "eslint --ext .js,.ts,.vue ./",
-    "test": "echo \"No test specified\" && exit 0"
+    "lint": "eslint --ext .js,.ts,.vue --fix ./",
+    "test": "echo \"No test specified\" && exit 0",
+    "dev": "quasar dev",
+    "build": "quasar build",
+    "build:pwa": "quasar build -m pwa"
   },
   "dependencies": {
     "@quasar/extras": "^1.10.9",
