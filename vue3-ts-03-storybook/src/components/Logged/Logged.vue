@@ -75,18 +75,5 @@
   </article>
 </template>
 
-<script>
-import "./logged.css";
-import MyHeader from "../containers/Header.vue";
-
-export default {
-  name: "my-logged",
-  components: { MyHeader },
-  props: {
-    user: {
-      type: Object,
-    },
-  },
-  emits: ["login", "logout", "createAccount"],
-};
-</script>
+<script src="./Logged.ts" />
+<style src="./logged.css" />

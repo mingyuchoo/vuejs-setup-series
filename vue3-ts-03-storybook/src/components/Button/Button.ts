@@ -1,14 +1,7 @@
-<template>
-  <button type="button" :class="classes" @click="onClick" :style="style">
-    {{ label }}
-  </button>
-</template>
-
-<script>
 import "./button.css";
-import { reactive, computed } from "vue";
+import { defineComponent, reactive, computed } from "vue";
 
-export default {
+export default defineComponent({
   name: "my-button",
 
   props: {
@@ -50,5 +43,4 @@ export default {
       },
     };
   },
-};
-</script>
+});

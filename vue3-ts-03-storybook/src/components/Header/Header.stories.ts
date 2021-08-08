@@ -5,7 +5,10 @@ export default {
   component: MyHeader,
 };
 
-const Template = (args) => ({
+type Args = {
+  user?: unknown;
+};
+const Template = (args: Args) => ({
   components: { MyHeader },
   setup() {
     return { ...args };

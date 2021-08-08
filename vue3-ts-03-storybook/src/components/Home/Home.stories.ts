@@ -5,7 +5,9 @@ export default {
   component: MyHome,
 };
 
-const Template = (args) => ({
+type Args = unknown;
+
+const Template = (args: Args) => ({
   components: { MyHome },
   setup() {
     return {};

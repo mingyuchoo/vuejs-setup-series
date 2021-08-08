@@ -50,21 +50,5 @@
   </header>
 </template>
 
-<script>
-import "./header.css";
-import MyButton from "../components/Button.vue";
-
-export default {
-  name: "my-header",
-
-  components: { MyButton },
-
-  props: {
-    user: {
-      type: Object,
-    },
-  },
-
-  emits: ["login", "logout", "createAccount"],
-};
-</script>
+<script src="./Header.ts" />
+<style src="./header.css" />
