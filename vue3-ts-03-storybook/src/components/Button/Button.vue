@@ -5,4 +5,4 @@
 </template>
 
 <script src="./Button.ts" />
-<style src="./button.css" />
+<style src="./Button.css" />

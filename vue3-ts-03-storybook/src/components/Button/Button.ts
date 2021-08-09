@@ -1,4 +1,3 @@
-import "./button.css";
 import { defineComponent, reactive, computed } from "vue";
 
 export default defineComponent({

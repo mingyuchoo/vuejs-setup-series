@@ -1,7 +1,7 @@
 import MyAbout from "./About.vue";
 
 export default {
-  title: "Example/pages/About",
+  title: "Example/About",
   component: MyAbout,
 };
 

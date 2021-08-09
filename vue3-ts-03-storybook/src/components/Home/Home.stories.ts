@@ -1,7 +1,7 @@
 import MyHome from "./Home.vue";
 
 export default {
-  title: "Example/pages/Home",
+  title: "Example/Home",
   component: MyHome,
 };
 

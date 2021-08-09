@@ -76,4 +76,4 @@
 </template>
 
 <script src="./Logged.ts" />
-<style src="./logged.css" />
+<style src="./Logged.css" />

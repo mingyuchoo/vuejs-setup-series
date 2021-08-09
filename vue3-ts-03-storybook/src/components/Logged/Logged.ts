@@ -1,4 +1,3 @@
-import "./logged.css";
 import { defineComponent } from "vue";
 import MyHeader from "../Header";
 
