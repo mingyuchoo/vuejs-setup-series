@@ -50,5 +50,44 @@
   </header>
 </template>
 
-<script src="./Header.ts" />
-<style src="./Header.css" />
+<script lang="ts">
+import { defineComponent } from "vue";
+import MyButton from "./Button.vue";
+
+export default defineComponent({
+  name: "my-header",
+  components: { MyButton },
+  props: {
+    user: {
+      type: Object,
+    },
+  },
+  emits: ["login", "logout", "createAccount"],
+});
+</script>
+
+<style lang="css" scoped>
+.wrapper {
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+svg {
+  display: inline-block;
+  vertical-align: top;
+}
+h1 {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1;
+  margin: 6px 0 6px 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+button + button {
+  margin-left: 10px;
+}
+</style>
