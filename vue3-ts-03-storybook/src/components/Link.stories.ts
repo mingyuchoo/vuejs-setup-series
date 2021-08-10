@@ -8,7 +8,6 @@ export default {
       control: { type: "select", options: ["small", "medium", "large"] },
     },
     backgroundColor: { control: "color" },
-    onClick: {},
   },
 };
 

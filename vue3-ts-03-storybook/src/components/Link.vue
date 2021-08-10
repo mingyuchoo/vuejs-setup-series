@@ -1,5 +1,5 @@
 <template>
-  <a href="" :class="classes" @click="onClick" :style="style">
+  <a href="" :class="classes" :style="style">
     {{ label }}
   </a>
 </template>
@@ -23,9 +23,6 @@ export default defineComponent({
       type: String,
     },
   },
-
-  emits: ["click"],
-
   setup(props: any, { emit }) {
     props = reactive(props);
     return {
