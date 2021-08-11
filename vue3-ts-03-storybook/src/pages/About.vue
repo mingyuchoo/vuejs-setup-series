@@ -1,16 +1,21 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
+    <p @click="clickHandler">{{ message }}</p>
+    <p>{{ reverseMessage }}</p>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { useMessage } from "@/composables";
 
 export default defineComponent({
   name: "my-about",
   setup() {
-    return {};
+    return {
+      ...useMessage(),
+    };
   },
 });
 </script>

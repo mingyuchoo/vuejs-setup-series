@@ -76,7 +76,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import MyHeader from "../components/Header.vue";
+import MyHeader from "@/components/Header.vue";
 
 export default defineComponent({
   name: "my-logged",
