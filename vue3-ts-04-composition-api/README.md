@@ -1,4 +1,4 @@
-# vue3-ts-03-storybook
+# vue3-ts-04-compostion-api
 
 ## Project setup
 
