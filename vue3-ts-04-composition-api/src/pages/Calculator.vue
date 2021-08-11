@@ -1,19 +1,25 @@
 <template>
-  <div class="home">
-    <h1 @click="onClick">Hello, {{ title }}!</h1>
+  <div>
+    <h2>Calculator</h2>
+    <div>
+      <input type="text" v-model="state.num1" />
+      <span> + </span>
+      <input type="text" v-model="state.num2" />
+      <span> = </span>
+      <span> {{ state.result }} </span>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { useTitle } from "@/composables";
+import { useCalc } from "@/composables";
 
 export default defineComponent({
-  name: "my-home",
-  components: {},
+  name: "my-calculator",
   setup() {
     return {
-      ...useTitle(),
+      ...useCalc(),
     };
   },
 });

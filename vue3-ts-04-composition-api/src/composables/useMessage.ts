@@ -1,10 +1,13 @@
 import { computed, ref, ComputedRef, Ref } from "vue";
 
-// return type
+// function type signature
+type ClickHandler = () => void;
+
+// return type declaration
 type UseMessageRet = {
   message: Ref<string>;
   reverseMessage: ComputedRef<string>;
-  clickHandler: () => void;
+  clickHandler: ClickHandler;
 };
 
 // function type signature
