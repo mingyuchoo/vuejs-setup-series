@@ -1,4 +1,4 @@
-# vue3-ts-04-compostion-api
+# vue3-ts-05-repository
 
 ## Project setup
 
