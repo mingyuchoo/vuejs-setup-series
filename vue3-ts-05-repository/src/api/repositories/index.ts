@@ -1,1 +1,1 @@
-export * from "./fetchUserRepositories";
+export * from "@/api/repositories/fetchUserRepositories";

@@ -1,4 +1,4 @@
-import MyAbout from "./About.vue";
+import MyAbout from "@/pages/About.vue";
 
 export default {
   title: "Example/About",

@@ -15,7 +15,7 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 #nav {
   font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -23,14 +23,5 @@ export default defineComponent({
   text-align: center;
   color: #2c3e50;
   padding: 30px;
-  a {
-    font-weight: 700;
-    color: #333;
-    background-color: transparent;
-    text-decoration: none;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 </style>

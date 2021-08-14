@@ -1,5 +1,5 @@
-import MyLogged from "./Logged.vue";
-import * as HeaderStories from "../components/Header.stories";
+import MyLogged from "@/pages/Logged.vue";
+import * as HeaderStories from "@/components/Header.stories";
 
 export default {
   title: "Example/Logged",

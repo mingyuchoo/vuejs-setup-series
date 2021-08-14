@@ -1,3 +1,3 @@
-export * from "./useMessage";
-export * from "./useTitle";
-export * from "./useCalc";
+export * from "@/composables/useMessage";
+export * from "@/composables/useTitle";
+export * from "@/composables/useCalc";

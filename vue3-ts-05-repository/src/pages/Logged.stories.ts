@@ -1,4 +1,4 @@
-import MyLogged from "./Logged.vue";
+import MyLogged from "@/pages/Logged.vue";
 import * as HeaderStories from "@/components/Header.stories";
 
 export default {

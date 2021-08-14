@@ -1,4 +1,4 @@
-import MyHeader from "./Nav.vue";
+import MyHeader from "@/components/Nav.vue";
 
 export default {
   title: "Example/Nav",

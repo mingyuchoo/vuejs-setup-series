@@ -1,4 +1,4 @@
-import fetchUserRepositories from "./fetchUserRepositories";
+import fetchUserRepositories from "@/api/repositories/fetchUserRepositories";
 
 describe("fetchUserRepositories.ts", () => {
   it("fetchUserRepositories", () => {

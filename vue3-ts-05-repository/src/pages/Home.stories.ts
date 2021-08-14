@@ -1,4 +1,4 @@
-import MyHome from "./Home.vue";
+import MyHome from "@/pages/Home.vue";
 
 export default {
   title: "Example/Home",

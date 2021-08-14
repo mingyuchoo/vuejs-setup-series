@@ -1,4 +1,4 @@
-import MyUserRepositories from "./UserRepositories.vue";
+import MyUserRepositories from "@/pages/UserRepositories.vue";
 
 export default {
   title: "Example/UserRepositories",
@@ -17,4 +17,3 @@ const Template = (args: Args) => ({
 });
 
 export const Default = Template.bind({});
-};

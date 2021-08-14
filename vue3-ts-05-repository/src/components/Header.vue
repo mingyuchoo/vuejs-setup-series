@@ -52,7 +52,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import MyButton from "./Button.vue";
+import MyButton from "@/components/Button.vue";
 
 export default defineComponent({
   name: "my-header",

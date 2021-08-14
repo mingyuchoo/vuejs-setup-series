@@ -1,4 +1,4 @@
-import MyCalculator from "./Calculator.vue";
+import MyCalculator from "@/pages/Calculator.vue";
 
 export default {
   title: "Example/Calculator",

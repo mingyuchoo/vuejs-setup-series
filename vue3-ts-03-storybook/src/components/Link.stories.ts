@@ -1,4 +1,4 @@
-import MyLink from "./Link.vue";
+import MyLink from "@/components/Link.vue";
 
 export default {
   title: "Example/Link",

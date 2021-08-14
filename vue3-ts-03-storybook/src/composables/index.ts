@@ -1,1 +1,1 @@
-export * from "./useMessage";
+export * from "@/composables/useMessage";
