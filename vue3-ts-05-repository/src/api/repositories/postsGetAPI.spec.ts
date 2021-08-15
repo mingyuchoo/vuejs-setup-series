@@ -1,8 +1,8 @@
-import fetchPostRepositories from "@/api/repositories/fetchPostRepositories";
+import postsGetAPI from "@/api/repositories/postsGetAPI";
 
-describe("fetchPostRepositories.ts", () => {
-  it("fetchPostRepositories", async () => {
-    const actualData = await fetchPostRepositories();
+describe("postsGetAPI.ts", () => {
+  it("postsGetAPI", async () => {
+    const actualData = await postsGetAPI();
     const expectedData = mockData;
 
     expect(actualData.data.value).toEqual(expectedData.data);

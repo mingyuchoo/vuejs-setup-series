@@ -1,24 +1,24 @@
 <template>
-  <h1>User Repositories</h1>
+  <h1>Users</h1>
   <pre>{{ repositories }}</pre>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { useUserRepositories } from "@/composables/useUserRepositories";
+import { useUsers } from "@/composables/useUsers";
 
 export default defineComponent({
-  name: "my-user-repositories",
+  name: "my-users",
   setup() {
-    const { repositories, getUserRepositories } = useUserRepositories();
+    const { repositories, getUsers } = useUsers();
     return {
       repositories,
-      getUserRepositories,
+      getUsers,
     };
 
     /* // or
     return {
-      ...useUserRepositories(),
+      ...useUsers(),
     };
     */
   },

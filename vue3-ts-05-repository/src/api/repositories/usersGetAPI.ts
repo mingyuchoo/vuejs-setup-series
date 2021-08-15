@@ -7,13 +7,13 @@ type User = {
 };
 
 // function return type declaration
-type FetchUserRepositoriesRet = Array<User>;
+type UsersGetAPIRet = Array<User>;
 
 // function type signature
-type FetchUserRepositories = () => FetchUserRepositoriesRet;
+type UsersGetAPI = () => UsersGetAPIRet;
 
 // function definition
-const fetchUserRepositories: FetchUserRepositories = () => {
+const usersGetAPI: UsersGetAPI = () => {
   const data = [
     {
       id: 1,
@@ -79,4 +79,4 @@ const fetchUserRepositories: FetchUserRepositories = () => {
   return data;
 };
 
-export default fetchUserRepositories;
+export default usersGetAPI;

@@ -1,8 +1,8 @@
-import fetchUserRepositories from "@/api/repositories/fetchUserRepositories";
+import usersGetAPI from "@/api/repositories/usersGetAPI";
 
-describe("fetchUserRepositories.ts", () => {
-  it("fetchUserRepositories", () => {
-    const actualData = fetchUserRepositories();
+describe("usersGetAPI.ts", () => {
+  it("usersGetAPI", () => {
+    const actualData = usersGetAPI();
     const expectedData = data;
     expect(actualData).toEqual(expectedData);
   });

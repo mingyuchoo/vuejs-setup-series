@@ -11,7 +11,7 @@ export type Post = {
 };
 
 // function return type declaration
-export type FetchPostRepositoriesRet = Promise<{
+export type PostsGetAPIRet = Promise<{
   data: ComputedRef<Post[]>;
   loading: Ref<boolean>;
   error: Ref<any>;
@@ -19,10 +19,10 @@ export type FetchPostRepositoriesRet = Promise<{
 }>;
 
 // function type signature
-export type FetchPostRepositories = () => FetchPostRepositoriesRet;
+export type PostsGetAPI = () => PostsGetAPIRet;
 
 // function definition
-const fetchPostRepositories: FetchPostRepositories = async () => {
+const postsGetAPI: PostsGetAPI = async () => {
   const HTTP_METHOD = "GET";
   const SERVER_URL = "https://jsonplaceholder.typicode.com";
   const SERVICE_PATH = "/posts";
@@ -43,4 +43,4 @@ const fetchPostRepositories: FetchPostRepositories = async () => {
   };
 };
 
-export default fetchPostRepositories;
+export default postsGetAPI;

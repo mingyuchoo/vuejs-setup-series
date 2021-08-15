@@ -4,7 +4,8 @@
     <router-link to="/logged">Logged</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/calc">Calculator</router-link> |
-    <router-link to="/user">UserRepositories</router-link>
+    <router-link to="/users">User</router-link> |
+    <router-link to="/posts">Post</router-link>
   </div>
 </template>
 

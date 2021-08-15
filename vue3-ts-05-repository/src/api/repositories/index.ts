@@ -1,2 +1,2 @@
-export * from "@/api/repositories/fetchPostRepositories";
-export * from "@/api/repositories/fetchUserRepositories";
+export * from "@/api/repositories/postsGetAPI";
+export * from "@/api/repositories/usersGetAPI";
