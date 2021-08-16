@@ -23,7 +23,7 @@
             />
           </g>
         </svg>
-        <h1>Acme</h1>
+        <h1>Vue3</h1>
       </div>
       <div>
         <my-button

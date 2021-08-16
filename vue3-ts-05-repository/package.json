@@ -8,6 +8,7 @@
     "test": "yarn test:unit:watch",
     "test:unit": "vue-cli-service test:unit",
     "test:unit:watch": "vue-cli-service test:unit --watchAll",
+    "coverage": "yarn test:unit --coverage",
     "lint": "vue-cli-service lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
