@@ -2,32 +2,42 @@
 
 ## Project setup
 
-```
+```bash
 yarn install
+```
+
+## Commands for Development
+
+### Lints and fixes files
+
+```bash
+yarn lint
+```
+
+### Run your unit tests
+
+```bash
+yarn test
+
+# or
+
+yarn test:unit
+
+# or
+
+yarn test:unit:watch
 ```
 
 ### Compiles and hot-reloads for development
 
-```
+```bash
 yarn serve
 ```
 
 ### Compiles and minifies for production
 
-```
+```bash
 yarn build
-```
-
-### Run your unit tests
-
-```
-yarn test:unit
-```
-
-### Lints and fixes files
-
-```
-yarn lint
 ```
 
 ### Customize configuration
