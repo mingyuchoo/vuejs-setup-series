@@ -1,5 +1,5 @@
 // user type declaration
-type User = {
+export type User = {
   id: number;
   name: string;
   username: string;
@@ -7,10 +7,10 @@ type User = {
 };
 
 // function return type declaration
-type UsersGetAPIRet = Array<User>;
+export type UsersGetAPIRet = Array<User>;
 
 // function type signature
-type UsersGetAPI = () => UsersGetAPIRet;
+export type UsersGetAPI = () => UsersGetAPIRet;
 
 // function definition
 const usersGetAPI: UsersGetAPI = () => {
