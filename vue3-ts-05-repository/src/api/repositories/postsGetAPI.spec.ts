@@ -1,6 +1,24 @@
 import postsGetAPI from "@/api/repositories/postsGetAPI";
 
+// Added for mocking
+import * as data from "@/__mocks__/data-posts-get-api.json";
+import { useAxios } from "@vue-composable/axios";
+jest.mock("@vue-composable/axios");
+
 describe("postsGetAPI.ts", () => {
+  // Implemented mock function
+  beforeAll(() => {
+    const mockFn = useAxios as jest.Mock<any>;
+    mockFn.mockImplementation(() =>
+      Promise.resolve({
+        data: data,
+        loading: false,
+        error: null,
+        status: 200,
+      })
+    );
+  });
+
   it("postsGetAPI", async () => {
     const actualData = await postsGetAPI();
     const expectedData = mockData;

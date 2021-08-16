@@ -1,7 +1,7 @@
 import { useUsers } from "@/composables/useUsers";
 
 // Added for mocking
-import * as data from "./__mocks__/data-users-get-api.json";
+import * as data from "@/__mocks__/data-users-get-api.json";
 import usersGetAPI, { UsersGetAPIRet } from "@/api/repositories/usersGetAPI";
 jest.mock("@/api/repositories/usersGetAPI");
 
